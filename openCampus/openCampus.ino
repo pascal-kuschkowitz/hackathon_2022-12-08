@@ -22,10 +22,12 @@ void loop() {
   unsigned long time = millis();
   delay(1);
 
+  // Only get value every second
   if (time % 1000 == 0) {
+      // Only get value if value is < than 0
       if (box_total > 0) {
-      Serial.println(box_total);
-      box_total = 0;
+        Serial.println(box_total);
+        box_total = 0;
       }
   }
 
